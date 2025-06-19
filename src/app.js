@@ -1,41 +1,23 @@
+const express = require("express");
 
-const express = require('express');
 const app = express();
 
+// Default route - runs for "/"
 app.use("/", (req, res) => {
-    res.send("Hello, JII YASH !");
+  res.send("Yash Chaudhary!");
 });
 
+// Route for "/hello"
 app.use("/hello", (req, res) => {
-    res.send("Hello, World!");
+  res.send("Hello hello hello!");
 });
 
+// Route for "/test"
 app.use("/test", (req, res) => {
-    res.send("TEST KARO!");
+  res.send("Hello from the server!");
 });
 
-
-app.listen(3000, () => {
-    console.log("Server is running on port 3000");
+// Start the server
+app.listen(7777, () => {
+  console.log("Server is successfully listening on port 7777...");
 });
-
-
-
-
-
-
-
-
-// const express = require('express');
-// const app = express();
-
-// app.use("/hello",(req,res)=>{
-//     res.send("Hello, World!");
-// });
-// app.use("/test",(req,res)=>{
-//     res.send("TEST KARO!");
-// });
-
-// app.listen(3000, () => {
-//     console.log("Server is running on port 3000");
-// });
