@@ -1,33 +1,9 @@
 const express = require("express");
 const app = express();
 
-app.use(express.json());
-
-app.use("/", (req, res, next) => {
-  res.send("Yash haudhary!");
-  next();
-});
-
-app.get("/user", (req, res) => {
+app.get("/user/:userId/:name/:password", (req, res) => {
+  console.log(req.params);
   res.send({ firstName: "yash", lastName: "chaudhary" });
-});
-
-app.use("/hello", (req, res, next) => {
-  res.send("Hello hello hello!");
-  next();
-});
-
-app.post("/user", async (req, res) => {
-  console.log(req.body);
-  res.send("Data successfully saved to the database!");
-});
-
-app.delete("/user", (req, res) => {
-  res.send("Deleted successfully!");
-});
-
-app.use("/test", (req, res) => {
-  res.send("Hello from the server!");
 });
 
 app.listen(7777, () => {
