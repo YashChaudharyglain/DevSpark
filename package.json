@@ -1,0 +1,19 @@
+{
+  "name": "devspark",
+  "version": "1.0.0",
+  "description": "developers thought,innovation,ideas sharing platform",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "Yash Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
