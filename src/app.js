@@ -4,12 +4,12 @@ const app = express();
 app.use(express.json());
 
 app.use("/", (req, res, next) => {
-  res.send("Namaste Akshay!");
+  res.send("Yash haudhary!");
   next();
 });
 
 app.get("/user", (req, res) => {
-  res.send({ firstName: "Akshay", lastName: "Saini" });
+  res.send({ firstName: "yash", lastName: "chaudhary" });
 });
 
 app.use("/hello", (req, res, next) => {
